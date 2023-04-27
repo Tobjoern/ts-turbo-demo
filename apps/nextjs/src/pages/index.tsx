@@ -9,12 +9,15 @@ const PostCard: React.FC<{
   post: RouterOutputs["post"]["all"][number];
   onPostDelete?: () => void;
 }> = ({ post, onPostDelete }) => {
+  const x: string = 4
+
   return (
     <div className="flex flex-row rounded-lg bg-white/10 p-4 transition-all hover:scale-[101%]">
       <div className="flex-grow">
         <h2 className="text-2xl font-bold text-pink-400">{post.title}</h2>
         <p className="mt-2 text-sm">{post.content}</p>
       </div>
+      <img></img>
       <div>
         <span
           className="cursor-pointer text-sm font-bold uppercase text-pink-400"
@@ -76,6 +79,7 @@ const CreatePostForm: React.FC = () => {
       >
         Create
       </button>
+      <img src="/images/nextjs.svg" alt="Next.js Logo" className="h-96" />
     </div>
   );
 };

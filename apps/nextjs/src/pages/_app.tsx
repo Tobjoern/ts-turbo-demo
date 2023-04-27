@@ -9,9 +9,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
+  const a: string = 4
+
   return (
     <SessionProvider session={session}>
       <Component {...pageProps} />
+      <img></img>
     </SessionProvider>
   );
 };
